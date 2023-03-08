@@ -1,0 +1,27 @@
+.project-thumb {
+    font-weight: 800;
+}
+/* HORIZONTAL SCROLL */
+
+.slider {
+    overflow: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;   
+}
+.slider::-webkit-scrollbar{
+    display: none;
+  }
+
+img.item {
+    width: 300px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 200px;
+    transition: 0.6s ease-in-out;
+    padding: 2em;
+}
+
+img.item:hover {
+    width: 400px;
+    height: 600px;
+}

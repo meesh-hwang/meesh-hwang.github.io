@@ -1,12 +1,20 @@
 import './App.css';
-import Banner from './components/header/Banner';
-import BodyNav from './components/bodynav/BodyNav';
+import { useState } from 'react';
+import Banner from './components/Banner';
+import Dropdown from './components/nav/Dropdown';
+import Development from './components/development/Development';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
+  const [active, setActive] = useState("");
+
   return (
     <div className="App">
       <Banner />
-      <BodyNav />
+      <Dropdown title="PROJECTS" active={active} setActive={setActive} content={<Development/>} />
+      <Dropdown title="ABOUT" active={active} setActive={setActive} content={<About/>} />
+      <Dropdown title="CONTACT" active={active} setActive={setActive} content={<Contact/>} />
     </div>
   );
 }
