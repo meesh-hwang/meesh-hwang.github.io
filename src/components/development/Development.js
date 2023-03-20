@@ -13,8 +13,8 @@ const Development = () => {
   };
    
   return (
-    <div className="slider" id="slider">
-      <div className="slide" id="slide">
+    <div className="slider-container" id="slider-container">
+      <div className="slider" id="slider">
         {data.map((item) => (
           <img className="item" id="img" onMouseEnter={scrollToProject} src={item.img} alt="/" />
         ))}
