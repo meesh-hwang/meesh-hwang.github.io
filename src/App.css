@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Michroma&family=Montserrat:wght@200&family=Syncopate:wght@400;700&display=swap");
+@import-normalize;
 
-body > #root > div {
-  height: 100vh;
-}
-
-body {
-  overflow: hidden;
-}
 .App {
   text-align: center;
   background-color: #dfd9df;
@@ -15,6 +9,7 @@ body {
   background-size:110%;
   background-position-x: center;
   min-height: 100vh;
+  font-family: 'syncopate';
 }
 
 a {
@@ -83,6 +78,21 @@ a {
   left: 50%;
   transform: translate(-100%, 30%);
 }
+
+.scroll-down {
+  background: url(../src/assets/down.png);
+  height: 58px;
+  width: 153px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 500%);
+  left: 50%;
+  animation: down 1s steps(2) infinite;
+}
+
+@keyframes down {
+  to { background-position: -306px; }
+}
 /* ------------------------ */
 /* -------- ACCORDION NAV -------- */
 /* ------------------------ */
@@ -104,6 +114,7 @@ a {
   color: #dfd9df;
   font-family: 'Syncopate', sans-serif;
   cursor: pointer;
+  z-index: 1;
 }
 
 .nav-btn:hover{

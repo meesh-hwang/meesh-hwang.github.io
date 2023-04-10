@@ -1,23 +1,37 @@
-import link from '../../../assets/link-icon.svg'
+import linkicon from "../../../assets/link-icon.svg";
 
-  const Project = ({title, link, description, tools, goals, closeModal}) => {
-    return (
-        <div className="modal-container">
-            <div onClick={() => closeModal(false)}>x</div>
+const Project = ({ title, link, description, tools, goals, closeModal }) => {
+  return (
+    <div className="modal-container">
+      <div onClick={() => closeModal(false)} className="close-modal">x</div>
+      <div className="modal-title">
+        <a href={link}> {title} <img src={linkicon} className="link-icon"/> </a>
+      </div>
+      <div className="modal-content">
+        <div className="modal-section-top">
           <div className="modal-section">
-            <a href={link}> {title}</a>
-          </div>
-          <div className='modal-section'>
-            <div>DESCRIPTION</div>
+            <div className="section-title">DESCRIPTION</div>
+            <hr />
             <p>{description}</p>
-            <div>TOOLS</div>
-            <p>{tools}</p>
-            <div>GOALS</div>
-            <p>{goals}</p>
-            <div>RESULT</div>
+          </div>
+          <div className="modal-section">
+            <div className="section-title">TOOLS</div>
+            <hr />
+            <p className="tools">{tools}</p>
           </div>
         </div>
-    )
-  }
+        <div className="modal-section">
+          <div className="section-title">GOALS</div>
+            <hr />
+          <p>{goals}</p>
+        </div>
+        <div className="modal-section">
+          <div className="section-title">RESULT</div>
+            <hr />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Project;

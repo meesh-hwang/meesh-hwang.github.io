@@ -11,6 +11,7 @@ const Banner = () => {
       <img src={smiley} className="smiley"/>
       <img src={boulders} className="boulders"/>
       <img src={palm} className="palm"/>
+      <div className='scroll-down'></div>
     </div>
   );
 }
