@@ -112,7 +112,6 @@ a {
   font-weight: 400;
   font-size: 2.5em;
   color: #dfd9df;
-  font-family: 'Syncopate', sans-serif;
   cursor: pointer;
   z-index: 1;
 }
@@ -131,13 +130,15 @@ a {
   overflow: hidden;
   height: 0;
   opacity: 0;
+  transform:scaleY(0);
   transition: all 600ms ease-in-out;
 }
 
 .nav-content.show {
-  height: 40em;
+  height: auto;
   opacity: 1;
   transition: all 600ms ease-in-out;
+  transform:scaleY(1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,4 +149,85 @@ a {
 }
 /* Development */
 
-/* Slider */
+/* Footer */
+
+.footer {
+  background-color: rgb(4, 0, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  font-size: 0.7em;
+  padding: 2.5em;
+}
+
+.footer a:hover {
+  color: rgb(136, 136, 136);
+}
+
+/* ABOUT */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: 100%;
+}
+
+.about-content {
+  background-color: #201a3691;
+  color:rgb(255, 255, 255);
+}
+
+.about-text {
+  width: 70%;
+  text-align: start;
+  line-height: 2.5;
+  border-radius: 350px;
+  font-size: 14px;
+}
+
+.about-text p {
+  padding: 10em 5em;
+}
+
+.about-skills {
+  align-self: flex-end;
+  width: 30%;
+  padding: 7em 5em;
+  border-radius: 300px;
+  line-height: 3;
+  font-weight: 800;
+  font-size: 15px;
+  margin-top: -100px;
+  margin-right: 50px;
+}
+
+.about-btn {
+  width: fit-content;
+  padding: 4em 2.5em;
+  border-radius: 200px;
+  align-self: center;
+  margin-top: -40px;
+  margin-right: -450px;
+}
+
+.about-btn:hover {
+  background-color: #6553a791;
+}
+
+.github-btn {
+  margin-right: -250px;
+}

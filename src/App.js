@@ -4,7 +4,7 @@ import Banner from './components/Banner';
 import Dropdown from './components/nav/Dropdown';
 import Development from './components/development/Development';
 import About from './components/About';
-import Contact from './components/Contact';
+import Footer from './Footer';
 
 function App() {
   const [active, setActive] = useState("");
@@ -14,7 +14,7 @@ function App() {
       <Banner />
       <Dropdown title="PROJECTS" active={active} setActive={setActive} content={<Development/>} />
       <Dropdown title="ABOUT" active={active} setActive={setActive} content={<About/>} />
-      <Dropdown title="CONTACT" active={active} setActive={setActive} content={<Contact/>} />
+      <Footer />
     </div>
   );
 }
