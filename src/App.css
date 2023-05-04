@@ -20,22 +20,29 @@ a {
 /* -------- BANNER -------- */
 /* ------------------------ */
 
+.banner-wrapper {
+  padding-bottom: 4rem;
+}
+
 .Banner {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 2;
 }
 
 .Banner h1 {
-  font-size: 10rem;
+  font-size: 9rem;
+  letter-spacing: 0.5rem;
   line-height: 0.8em;
-  padding: 8rem;
-  line-height: 9rem;
-  font-family: 'lilita one', sans-serif;
+  padding: 8rem 6rem 1rem 6rem;
+  line-height: 8rem;
   overflow: hidden;
   display: block;
+  font-family: 'lilita one', sans-serif;
+  text-shadow: 4px 6px #5b5b5b1f;
 
   background: linear-gradient(to right, rgb(240, 210, 151) 0%, rgb(93, 93, 190) 30%, rgb(206, 153, 178) 60%, rgb(158, 204, 173) 100%);
   background-size: 200% auto;
@@ -46,48 +53,61 @@ a {
   -webkit-text-fill-color: transparent;
   animation: shine 2s linear infinite;
 }
+
 @keyframes shine {
   to {
     background-position: 200% center;
   }
 }
 
+/* .Banner img {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+} */
+
 .tree {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-105%, -100%);
+  transform: translate(-105%, -80%);
 }
 
 .boulders {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(150%, -40%);
+  transform: translate(130%, 70%);
 }
 
 .palm {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(150%, 60%);
+  transform: translate(150%, 100%);
 }
 .smiley {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-100%, 30%);
+  transform: translate(-120%, 120%);
 }
 
 .scroll-down {
   background: url(../src/assets/down.png);
   height: 58px;
   width: 153px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, 500%);
-  left: 50%;
   animation: down 1s steps(2) infinite;
+  margin-left: calc(50% - 76.5px);
+}
+
+h3.banner-tag {
+  margin-top: -5rem;
+  letter-spacing: 0.5rem;
+  line-height: 2em;
+  font-weight: 400;
+  font-size: 1.1em;
+  padding-bottom: 4rem;
+  color: #767177;
 }
 
 @keyframes down {
@@ -177,3 +197,63 @@ a {
 
 /* ABOUT */
 
+.about-container {
+  display: flex;
+  z-index: 2;
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content:nth-child(1) {
+  padding: 5em 4em;
+}
+
+.about-content:nth-child(2) {
+  background-color: #F0EDF0;
+}
+
+.about-content p {
+  text-align: start;
+  line-height: 2.5em;
+  font-weight: 600;
+  font-size: 0.8em;
+  padding: 8em 9em 4em 9em;
+  transition: all 600ms ease-in-out;
+  color: #565163;
+}
+
+.meesh {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: -30px -30px #F0EDF0;
+  align-self: center;
+}
+
+.about-skills {
+  letter-spacing: 0.5rem;
+  padding-top: 3em;
+  line-height: 1.7em;
+  font-weight: 600;
+  color: #565163;
+  margin-right: -8rem;
+  z-index: 2;
+}
+
+.about-btn {
+  background-color: #DFD9DF;
+  align-self: center;
+  padding: 2em 0;
+  width: 200px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #524D53;
+}
+
+.about-btn:hover {
+  background-color: #413d4a;
+  color: #ffff;
+}

@@ -5,12 +5,10 @@ import {useState, useEffect, useRef} from "react";
 const Dropdown = ({title, active, setActive, content}) => {
     const [toggle, setToggle] = useState(false);
 
-    const navRef = useRef();
-
     return(
         <div className="nav">
             <div className='nav-btns'>
-                <div className="nav-btn" ref={navRef} onClick={() => {setActive(title); setToggle(!toggle);}}>
+                <div className="nav-btn" onClick={() => {setActive(title); setToggle(!toggle);}}>
                     <div className="container">
                         <p>{title}</p>
                     </div>
