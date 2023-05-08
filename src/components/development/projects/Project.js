@@ -1,11 +1,11 @@
 import linkicon from "../../../assets/link-icon.svg";
 
-const Project = ({ title, link, description, tools, goals, img, closeModal }) => {
+const Project = ({ title, link, description, tools, goals, closeModal }) => {
   return (
     <div className="modal-container">
       <div onClick={() => closeModal(false)} className="close-modal">x</div>
       <div className="modal-title">
-        <a href={link} target="_blank"> {title} <img src={linkicon} className="link-icon"/> </a>
+        <a href={link} rel="noreferrer" target="_blank"> {title} <img src={linkicon} alt="Open link in new tab" className="link-icon"/> </a>
       </div>
       <div className="modal-content">
         <div className="modal-section-top">
