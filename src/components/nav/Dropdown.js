@@ -1,14 +1,26 @@
 //import About from "../about/About";
-import Development from "../development/Development";
-import {useState, useEffect, useRef} from "react";
+import {useState} from "react";
 
 const Dropdown = ({title, active, setActive, content}) => {
     const [toggle, setToggle] = useState(false);
 
+    const scrollTo = () => {
+        const element = document.getElementById(title)
+        element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    };
+
+    const dropdownToggle = () => {
+        if (toggle === false) {
+            setToggle(!toggle)
+        } else if (active === title){
+            setToggle(!toggle)
+        }
+    }
+
     return(
         <div className="nav">
             <div className='nav-btns'>
-                <div className="nav-btn" onClick={() => {setActive(title); setToggle(!toggle);}}>
+                <div  id={title} className="nav-btn" onClick={() => {scrollTo(); setActive(title); dropdownToggle();}}>
                     <div className="container">
                         <p>{title}</p>
                     </div>

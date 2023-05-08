@@ -208,11 +208,13 @@ h3.banner-tag {
 }
 
 .about-content:nth-child(1) {
-  padding: 5em 4em;
+  padding: 7em 7em 3em 7em;
+  align-content: center;
 }
 
 .about-content:nth-child(2) {
   background-color: #F0EDF0;
+  padding: 8em 10em 3em 2em;
 }
 
 .about-content p {
@@ -220,27 +222,28 @@ h3.banner-tag {
   line-height: 2.5em;
   font-weight: 600;
   font-size: 0.8em;
-  padding: 8em 9em 4em 9em;
+  padding: 0 12em 4em 12em;
   transition: all 600ms ease-in-out;
   color: #565163;
 }
 
 .meesh {
-  width: 300px;
-  height: 400px;
+  width: 275px;
+  height: 350px;
   object-fit: cover;
-  box-shadow: -30px -30px #F0EDF0;
+  box-shadow: -35px -35px #F0EDF0;
   align-self: center;
 }
 
 .about-skills {
   letter-spacing: 0.5rem;
-  padding-top: 3em;
-  line-height: 1.7em;
+  padding-top: 4em;
+  align-self: center;
+  line-height: 1.9em;
   font-weight: 600;
   color: #565163;
-  margin-right: -8rem;
   z-index: 2;
+  width: 130%;
 }
 
 .about-btn {
@@ -248,12 +251,18 @@ h3.banner-tag {
   align-self: center;
   padding: 2em 0;
   width: 200px;
-  margin-bottom: 20px;
   font-size: 1.2em;
+  margin: 0 2em 4em 2em;
   color: #524D53;
 }
 
 .about-btn:hover {
   background-color: #413d4a;
   color: #ffff;
+}
+
+.about-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
