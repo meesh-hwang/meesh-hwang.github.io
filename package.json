@@ -1,7 +1,11 @@
 {
   "name": "meesh",
   "version": "0.1.0",
+<<<<<<< HEAD
   "homepage": "https://meeshhwang.ca",
+=======
+  "homepage": "https://meesh-hwang.github.io/",
+>>>>>>> ca809f14874e927ab471c72b4650b13209607a76
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
