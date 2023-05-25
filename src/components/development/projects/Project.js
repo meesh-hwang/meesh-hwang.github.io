@@ -1,6 +1,6 @@
 import linkicon from "../../../assets/link-icon.svg";
 
-const Project = ({ title, link, description, tools, goals, closeModal }) => {
+const Project = ({ title, link, gitLink, description, tools, details, closeModal }) => {
   return (
     <div className="modal-container">
       <div onClick={() => closeModal(false)} className="close-modal">x</div>
@@ -20,10 +20,14 @@ const Project = ({ title, link, description, tools, goals, closeModal }) => {
             <p className="tools">{tools}</p>
           </div>
         </div>
+        <div className="modal-section link-btns">
+          <a href={link} rel="noreferrer" target="_blank" className="link-btn">View</a>
+          {gitLink ? <a href={gitLink} rel="noreferrer" target="_blank" className="link-btn">GitHub</a> : null}
+        </div>
         <div className="modal-section">
-          <div className="section-title">GOALS</div>
+          <div className="section-title">DETAILS</div>
             <hr />
-          <p>{goals}</p>
+          <p>{details}</p>
         </div>
       </div>
     </div>

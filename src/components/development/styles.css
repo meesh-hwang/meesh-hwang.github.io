@@ -15,6 +15,7 @@
 .slider {
   display: flex;
   justify-content: center;
+  padding: 2em 0;
 }
 
 /* PROJECT */
@@ -23,7 +24,7 @@
   position: relative;
   transition: 0.6s ease-in-out;
   width: 225px;
-  height: 500px;
+  height: 475px;
   padding: 2em;
 }
 
@@ -73,44 +74,49 @@
 /*PROJECT MODALS*/
 
 .modal {
-  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 5%;
   font-family: "syncopate", monospace;
   opacity: 0;
   border-radius: 70px;
   color: white;
-  scrollbar-width: thin;
-  scrollbar-color: rgb(255, 255, 255);
+  background-color: #040024;
 }
 
-.modal::-webkit-scrollbar {
-  width: 10px;
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+  top: 10px;
   left: 0;
 }
 
-.modal::-webkit-scrollbar-track{
+.modal-container::-webkit-scrollbar-track{
   background: transparent;
 }
 
-.modal::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
+.modal-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.572);
   border-radius: 20px;
 }
 
-
 .show .modal-container {
-  background-color: #040024;
-  padding: 3rem;
+  overflow-y:scroll; 
+  overflow-x:hidden;
+  padding: 0.7rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  z-index: 12;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255);
+  width: 85%;
+  height: 70%;
 }
 
 .show .modal p {
   line-height: 1.6;
+  font-size: 0.9em;
 }
 
 .show .pg-overlay {
@@ -120,7 +126,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .modal.show {
   height: 90vh;
@@ -134,25 +140,20 @@
   z-index: 2;
 }
 
-
-.show .modal-title {
-  line-height: 2;
-  font-size: 1.4em;
-  white-space: initial;
-  width: 60%;
-}
-
 .show img.link-icon {
   width: 25px;
   height: 25px;
   border-radius: 0;
 }
 
-.show .modal-container a {
+.show .modal-title a {
   color: white;
   text-transform: uppercase;
   font-family: "syncopate", monospace;
-  font-size: 1.5em;
+  line-height: 2;
+  font-size: 1.8em;
+  white-space: initial;
+  width: 60%;
 }
 
 .show .close-modal {
@@ -160,6 +161,8 @@
   font-weight: 100;
   position: fixed;
   cursor: pointer;
+  top: 10%;
+  margin-right: -3%;
   align-self: flex-end;
 }
 
@@ -176,13 +179,15 @@
   white-space: initial;
   align-items: flex-start;
   text-align: start;
-  padding: 2rem 6rem;
+  padding: 2rem 4rem;
 }
+
 .show .modal-section:nth-of-type(1) {
   width: 50%;
 }
 
 .show .modal-section-top {
+  padding-top: 30px;
   display: flex;
 }
 
@@ -202,3 +207,267 @@ hr {
 .tools {
   width: min-content;
 }
+
+.show .link-btns {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  margin-right: 2rem;
+  color: #524D53;
+}
+
+.show a.link-btn:hover {
+  background-color: #413d4a;
+  color: #ffff;
+} 
+
+/* DESKTOPS/LARGER SCREENS */
+
+@media (max-width: 1200px) {
+
+.project-item{
+  width: 200px;
+  height: 475px;
+  padding: 1.5em 2em;
+}
+
+.project-item .overlay {
+  top: 1.5em;
+  left: 1.5em;
+  height: calc(100% - 3em);
+  width: calc(100% - 3em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 400px;
+}
+
+.title {
+  font-size: 21px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.show .modal-container {
+  padding: 1rem 3.5rem;
+}
+
+.show .modal-section-top {
+  padding-top: 25px;
+}
+
+.show .modal p {
+  line-height: 1.6;
+  font-size: 0.8em;
+}
+
+.show .modal-title a {
+  line-height: 2;
+  font-size: 1.9em;
+}
+
+.show img.link-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.show .close-modal {
+  font-size: 2.3em;
+  top: 14%;
+  margin-right: -3%;
+}
+
+.show .modal-section {
+  padding: 1.8rem 3.8rem;
+}
+
+.show .section-title {
+  line-height: 1.8;
+  font-size: 1.2em;
+}
+
+hr {
+  height: 0.8px;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 0.9em 2em;
+  font-size: 1.2em;
+  margin-right: 2rem;
+  color: #524D53;
+}
+}
+
+/* SMALL SCREENS/LAPTOPS */
+
+
+@media (max-width: 1024px) {
+
+.project-item{
+  width: 175px;
+  height: 375px;
+  padding: 1.5em;
+}
+
+.project-item .overlay {
+  top: 1.5em;
+  left: 1.5em;
+  height: calc(100% - 3em);
+  width: calc(100% - 3em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 400px;
+}
+
+.title {
+  font-size: 21px;
+}
+
+.modal.show {
+  height: 80vh;
+  width: 70vw;
+  top: 10%;
+}
+
+.show .modal-section-top {
+  padding-top: 20px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.show .modal-container {
+  padding: 0.4rem 2rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.7em;
+}
+
+.show .modal-title a {
+  line-height: 2;
+  font-size: 1.6em;
+}
+
+.show img.link-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.show .close-modal {
+  font-size: 2.1em;
+}
+
+.show .modal-section {
+  padding: 1.6rem 3.6rem;
+}
+
+.show .section-title {
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+hr {
+  height: 0.6px;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 1em 1.4em;
+  font-size: 1.1em;
+  margin-right: 1.4rem;
+  color: #524D53;
+}
+}
+
+/* IPADS/TABLETS */
+
+@media (max-width: 768px) {
+
+.project-item{
+  width: 175px;
+  height: 300px;
+  padding: 1em;
+}
+
+.project-item .overlay {
+  top: 1em;
+  left: 1em;
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 350px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.show .modal-container {
+  padding: 0.5rem 1rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.6em;
+}
+
+.show .modal-title a {
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+.show img.link-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.show .modal-section-top {
+  padding-top: 15px
+}
+
+.show .close-modal {
+  font-size: 1.8em;
+}
+
+.show .modal-section {
+  padding: 1rem 2rem;
+}
+
+.show .section-title {
+  line-height: 1.4;
+  font-size: 0.95em;
+}
+
+div.modal-title {
+  margin-top: -15px;
+}
+
+.show a.link-btn {
+  padding: 0.9em 1.3em;
+  font-size: 0.8em;
+  margin-right: 1.5rem;
+}
+}
+

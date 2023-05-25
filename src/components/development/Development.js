@@ -1,6 +1,6 @@
 import { data } from "./ProjectData";
 import "./styles.css";
-import {React, useState, useEffect} from "react";
+import {React, useState} from "react";
 import Project from "./projects/Project";
 
 
@@ -11,14 +11,6 @@ const Development = () => {
   const [toggle, setToggle] = useState(false);
   // Set selected project
   const [active, setActive] = useState("");
-
-  
-  // Disable scroll when modal is open
-  useEffect(() => {
-    const body = document.querySelector('body');
-    body.style.overflow = toggle === true ? 'hidden' : 'auto';
-  }, [toggle])
-
 
   return (
     <div className="slider-container" id="slider-container">
@@ -31,9 +23,9 @@ const Development = () => {
                 {item.title}
               </div>
             </div>
+            {active === item.title && toggle===true ? <div className="pg-overlay" /> : null}
             <div className={(active === item.title && toggle === true ? "show" : "") + " modal"} >
-              {active === item.title && toggle===true ? <div className="pg-overlay" /> : null}
-              <Project title={item.title} link={item.link} description={item.description} goals={item.goals} tools={item.tools} closeModal={setToggle}/>
+              <Project title={item.title} link={item.link} gitLink={item.gitLink} description={item.description} details={item.details} tools={item.tools} closeModal={setToggle}/>
             </div>
           </div>
         ))}
