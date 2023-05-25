@@ -1,27 +1,22 @@
 .project-thumb {
   font-weight: 800;
 }
-/* HORIZONTAL SCROLL */
 
 .slider-container {
-  overflow: auto;
-  white-space: nowrap;
-  -ms-overflow-style: none;
+  width: fit-content;
+  height: 100%;
 }
-.slider-container::-webkit-scrollbar {
-  display: none;
-}
-
 .slider {
+  padding: 2em 0;
   display: flex;
   justify-content: center;
-  padding: 2em 0;
 }
 
 /* PROJECT */
 
 .project-item {
   position: relative;
+  display: inline-block;
   transition: 0.6s ease-in-out;
   width: 225px;
   height: 475px;
@@ -397,6 +392,97 @@ hr {
 /* IPADS/TABLETS */
 
 @media (max-width: 768px) {
+
+.project-item{
+  width: 175px;
+  height: 300px;
+  padding: 1em;
+}
+
+.project-item .overlay {
+  top: 1em;
+  left: 1em;
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 350px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.show .modal-container {
+  padding: 0.5rem 1rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.6em;
+}
+
+.show .modal-title a {
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+.show img.link-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.show .modal-section-top {
+  padding-top: 15px
+}
+
+.show .close-modal {
+  font-size: 1.8em;
+}
+
+.show .modal-section {
+  padding: 1rem 2rem;
+}
+
+.show .section-title {
+  line-height: 1.4;
+  font-size: 0.95em;
+}
+
+div.modal-title {
+  margin-top: -15px;
+}
+
+.show a.link-btn {
+  padding: 0.9em 1.3em;
+  font-size: 0.8em;
+  margin-right: 1.5rem;
+}
+}
+
+
+/* IPADS/TABLETS */
+
+@media (max-width: 480px) {
+
+.nav-content .container {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.nav-content .container::-webkit-scrollbar-thumb{
+  background-color: #040024;
+};
+
+.slider-container::-webkit-scrollbar-track{
+  color: #040024;
+};
 
 .project-item{
   width: 175px;
