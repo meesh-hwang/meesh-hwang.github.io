@@ -1,0 +1,559 @@
+.project-thumb {
+  font-weight: 800;
+}
+
+.slider-container {
+  width: fit-content;
+  height: 100%;
+}
+.slider {
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* PROJECT */
+
+.project-item {
+  position: relative;
+  display: inline-block;
+  transition: 0.6s ease-in-out;
+  width: 225px;
+  height: 475px;
+  padding: 2em;
+}
+
+.project-item .overlay {
+  position: absolute;
+  top: 2em;
+  bottom: 0;
+  left: 2em;
+  right: 0;
+  height: calc(100% - 4em);
+  width: calc(100% - 4em);
+  border-radius: 200px;
+  opacity: 0;
+  background-color: #8d8d8d8d;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+.project-item:hover {
+  width: 300px;
+  height: 550px;
+}
+
+.project-item:hover .overlay {
+  opacity: 1;
+}
+
+.title {
+  color: white;
+  font-size: 26px;
+  position: absolute;
+  font-family: "Syncopate";
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: normal;
+  line-height: 2;
+}
+
+/*PROJECT MODALS*/
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  font-family: "syncopate", monospace;
+  opacity: 0;
+  border-radius: 70px;
+  color: white;
+  background-color: #040024;
+}
+
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+  top: 10px;
+  left: 0;
+}
+
+.modal-container::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.572);
+  border-radius: 20px;
+}
+
+.show .modal-container {
+  overflow-y:scroll; 
+  overflow-x:hidden;
+  padding: 0.7rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255);
+  width: 85%;
+  height: 70%;
+}
+
+.show .modal p {
+  line-height: 1.6;
+  font-size: 0.9em;
+}
+
+.show .pg-overlay {
+  position: fixed;
+  background-color: #4f4f4f6e;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.modal.show {
+  height: 90vh;
+  width: 80vw;
+  opacity: 1;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transition: all 600ms ease-in-out;
+  z-index: 2;
+}
+
+.show img.link-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 0;
+}
+
+.show .modal-title a {
+  color: white;
+  text-transform: uppercase;
+  font-family: "syncopate", monospace;
+  line-height: 2;
+  font-size: 1.8em;
+  white-space: initial;
+  width: 60%;
+}
+
+.show .close-modal {
+  font-size: 2.5em;
+  font-weight: 100;
+  position: fixed;
+  cursor: pointer;
+  top: 10%;
+  margin-right: -3%;
+  align-self: flex-end;
+}
+
+.show .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.show .modal-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  white-space: initial;
+  align-items: flex-start;
+  text-align: start;
+  padding: 2rem 4rem;
+}
+
+.show .modal-section:nth-of-type(1) {
+  width: 50%;
+}
+
+.show .modal-section-top {
+  padding-top: 30px;
+  display: flex;
+}
+
+.show .section-title {
+  font-weight: 800;
+  line-height: 2;
+  font-size: 1.3em;
+}
+
+hr {
+  background-color: white;
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.tools {
+  width: min-content;
+}
+
+.show .link-btns {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  margin-right: 2rem;
+  color: #524D53;
+}
+
+.show a.link-btn:hover {
+  background-color: #413d4a;
+  color: #ffff;
+} 
+
+/* DESKTOPS/LARGER SCREENS */
+
+@media (max-width: 1200px) {
+
+.project-item{
+  width: 200px;
+  height: 475px;
+  padding: 1.5em 2em;
+}
+
+.project-item .overlay {
+  top: 1.5em;
+  left: 1.5em;
+  height: calc(100% - 3em);
+  width: calc(100% - 3em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 400px;
+}
+
+.title {
+  font-size: 21px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.show .modal-container {
+  padding: 1rem 3.5rem;
+}
+
+.show .modal-section-top {
+  padding-top: 25px;
+}
+
+.show .modal p {
+  line-height: 1.6;
+  font-size: 0.8em;
+}
+
+.show .modal-title a {
+  line-height: 2;
+  font-size: 1.9em;
+}
+
+.show img.link-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.show .close-modal {
+  font-size: 2.3em;
+  top: 14%;
+  margin-right: -3%;
+}
+
+.show .modal-section {
+  padding: 1.8rem 3.8rem;
+}
+
+.show .section-title {
+  line-height: 1.8;
+  font-size: 1.2em;
+}
+
+hr {
+  height: 0.8px;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 0.9em 2em;
+  font-size: 1.2em;
+  margin-right: 2rem;
+  color: #524D53;
+}
+}
+
+/* SMALL SCREENS/LAPTOPS */
+
+
+@media (max-width: 1024px) {
+
+.project-item{
+  width: 175px;
+  height: 375px;
+  padding: 1.5em;
+}
+
+.project-item .overlay {
+  top: 1.5em;
+  left: 1.5em;
+  height: calc(100% - 3em);
+  width: calc(100% - 3em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 400px;
+}
+
+.title {
+  font-size: 21px;
+}
+
+.modal.show {
+  height: 80vh;
+  width: 70vw;
+  top: 10%;
+}
+
+.show .modal-section-top {
+  padding-top: 20px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.show .modal-container {
+  padding: 0.4rem 2rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.7em;
+}
+
+.show .modal-title a {
+  line-height: 2;
+  font-size: 1.6em;
+}
+
+.show img.link-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.show .close-modal {
+  font-size: 2.1em;
+}
+
+.show .modal-section {
+  padding: 1.6rem 3.6rem;
+}
+
+.show .section-title {
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+hr {
+  height: 0.6px;
+}
+
+.show a.link-btn {
+  background-color: #DFD9DF;
+  padding: 1em 1.4em;
+  font-size: 1.1em;
+  margin-right: 1.4rem;
+  color: #524D53;
+}
+}
+
+/* IPADS/TABLETS */
+
+@media (max-width: 768px) {
+
+.project-item{
+  width: 175px;
+  height: 300px;
+  padding: 1em;
+}
+
+.project-item .overlay {
+  top: 1em;
+  left: 1em;
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 350px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.show .modal-container {
+  padding: 0.5rem 1rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.6em;
+}
+
+.show .modal-title a {
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+.show img.link-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.show .modal-section-top {
+  padding-top: 15px
+}
+
+.show .close-modal {
+  font-size: 1.8em;
+}
+
+.show .modal-section {
+  padding: 1rem 2rem;
+}
+
+.show .section-title {
+  line-height: 1.4;
+  font-size: 0.95em;
+}
+
+div.modal-title {
+  margin-top: -15px;
+}
+
+.show a.link-btn {
+  padding: 0.9em 1.3em;
+  font-size: 0.8em;
+  margin-right: 1.5rem;
+}
+}
+
+
+/* IPADS/TABLETS */
+
+@media (max-width: 480px) {
+
+.nav-content .container {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.nav-content .container::-webkit-scrollbar-thumb{
+  background-color: #040024;
+};
+
+.slider-container::-webkit-scrollbar-track{
+  color: #040024;
+};
+
+.project-item{
+  width: 175px;
+  height: 300px;
+  padding: 1em;
+}
+
+.project-item .overlay {
+  top: 1em;
+  left: 1em;
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+.project-item:hover {
+  width: 200px;
+  height: 350px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.show .modal-container {
+  padding: 0.5rem 1rem;
+}
+
+.show .modal p {
+  line-height: 1.4;
+  font-size: 0.6em;
+}
+
+.show .modal-title a {
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+.show img.link-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.show .modal-section-top {
+  padding-top: 15px
+}
+
+.show .close-modal {
+  font-size: 1.8em;
+}
+
+.show .modal-section {
+  padding: 1rem 2rem;
+}
+
+.show .section-title {
+  line-height: 1.4;
+  font-size: 0.95em;
+}
+
+div.modal-title {
+  margin-top: -15px;
+}
+
+.show a.link-btn {
+  padding: 0.9em 1.3em;
+  font-size: 0.8em;
+  margin-right: 1.5rem;
+}
+}
+

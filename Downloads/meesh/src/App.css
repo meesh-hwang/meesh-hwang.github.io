@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Michroma&family=Montserrat:wght@200&family=Syncopate:wght@400;700&display=swap");
+@import-normalize;
+
+.App{
+  display: flex;
+  flex-direction: column;
+}
+
+.construction {
+  max-width: 90vw;
+  max-height: 70vh;
+  margin: auto;
+  padding: 12vh;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #413d4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  font-size: 0.7em;
+  padding: 2.5em;
+}
+
+.footer a:hover {
+  color: rgb(136, 136, 136);
+}
